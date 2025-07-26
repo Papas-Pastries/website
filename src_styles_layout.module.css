@@ -1,0 +1,78 @@
+:root {
+  --amber: #FFBF43;
+  --amber-dark: #B97A20;
+  --amber-light: #FFE5B3;
+  --brown: #6E3B16;
+  --cream: #FFF8EC;
+}
+
+.site-wrapper {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: var(--cream);
+  color: var(--brown);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--amber);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(185, 122, 32, 0.14);
+}
+.logo img {
+  height: 48px;
+}
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.navlinks li a {
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+.navlinks li a.active, .navlinks li a:hover {
+  background: var(--amber-dark);
+  color: #fff;
+}
+.hero {
+  background: linear-gradient(90deg, var(--amber-light) 60%, var(--cream) 100%);
+  padding: 3rem 2rem 2rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.features > div {
+  background: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(110,59,22,0.07);
+  min-width: 220px;
+  max-width: 300px;
+}
+@media (max-width: 900px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+main {
+  flex: 1;
+}
